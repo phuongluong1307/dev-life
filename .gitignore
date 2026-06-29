@@ -1,0 +1,13 @@
+node_modules/
+out/
+dist/
+.vite/
+*.log
+.DS_Store
+resources/sample-miniapps/
+scripts/sample-miniapps/
+.agents/
+
+.env.*
+
+.vscode
