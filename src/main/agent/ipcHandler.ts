@@ -1,4 +1,6 @@
 import { randomUUID } from 'node:crypto'
+import fs from 'node:fs'
+import path from 'node:path'
 import { dialog, ipcMain } from 'electron'
 import { runAgent } from './orchestrator'
 
@@ -85,4 +87,43 @@ export function setupAiAgentIPC() {
     if (result.canceled || result.filePaths.length === 0) return { success: false }
     return { success: true, path: result.filePaths[0] }
   })
+
+  // List all files in a workspace directory (recursive, skips node_modules / dotfiles)
+  ipcMain.handle('agent:list-workspace-files', async (_event, workspacePath: string) => {
+    try {
+      const files: string[] = []
+      const IGNORED = new Set(['node_modules', '.git', 'dist', 'out', '.DS_Store'])
+      const walk = (dir: string, prefix = '') => {
+        if (!fs.existsSync(dir)) return
+        for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+          if (entry.name.startsWith('.') || IGNORED.has(entry.name)) continue
+          const rel = prefix ? `${prefix}/${entry.name}` : entry.name
+          if (entry.isDirectory()) {
+            walk(path.join(dir, entry.name), rel)
+          } else {
+            files.push(rel)
+          }
+        }
+      }
+      walk(workspacePath)
+      return { success: true, files }
+    } catch (err: any) {
+      return { success: false, files: [], error: err.message }
+    }
+  })
+
+  // Read a single file relative to the workspace
+  ipcMain.handle(
+    'agent:read-workspace-file',
+    async (_event, workspacePath: string, filePath: string) => {
+      try {
+        const abs = path.join(workspacePath, filePath)
+        if (!abs.startsWith(workspacePath)) return { success: false }
+        const content = fs.readFileSync(abs, 'utf8')
+        return { success: true, content }
+      } catch (err: any) {
+        return { success: false, error: err.message }
+      }
+    },
+  )
 }

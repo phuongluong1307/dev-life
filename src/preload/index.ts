@@ -196,6 +196,15 @@ const api = {
   openDirectoryDialog: (): Promise<{ success: boolean; path?: string }> =>
     ipcRenderer.invoke('agent:open-directory'),
 
+  listWorkspaceFiles: (workspacePath: string): Promise<{ success: boolean; files?: string[] }> =>
+    ipcRenderer.invoke('agent:list-workspace-files', workspacePath),
+
+  readWorkspaceFile: (
+    workspacePath: string,
+    filePath: string,
+  ): Promise<{ success: boolean; content?: string }> =>
+    ipcRenderer.invoke('agent:read-workspace-file', workspacePath, filePath),
+
   onAgentEvent: (
     callback: (ev: {
       requestId: string

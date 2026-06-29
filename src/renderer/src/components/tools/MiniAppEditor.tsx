@@ -1,4 +1,9 @@
-import Editor, { type BeforeMount, DiffEditor, type DiffOnMount, type OnMount } from '@monaco-editor/react'
+import Editor, {
+  type BeforeMount,
+  DiffEditor,
+  type DiffOnMount,
+  type OnMount,
+} from '@monaco-editor/react'
 import {
   ArrowLeft,
   ChevronDown,
@@ -339,9 +344,11 @@ export default function MiniAppEditor() {
       if (!selection) return
       const tab = activeTabRef.current
       const file =
-        tab === 'frontend' ? 'frontend/index.jsx'
-        : tab === 'backend' ? 'backend/index.js'
-        : 'panel/index.jsx'
+        tab === 'frontend'
+          ? 'frontend/index.jsx'
+          : tab === 'backend'
+            ? 'backend/index.js'
+            : 'panel/index.jsx'
       agentSidebarRef.current?.addSnippet(file, selection.startLineNumber, selection.endLineNumber)
     })
   }, [])
