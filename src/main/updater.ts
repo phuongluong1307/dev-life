@@ -31,7 +31,7 @@ function detectGitHubRepo(): string {
     // Fall through to fallback
   }
   console.warn('[Updater] Could not detect repo from package.json, using fallback')
-  return 'phamvanquyit/dev-life'
+  return 'phuongluong1307/dev-life'
 }
 
 const GITHUB_REPO = detectGitHubRepo()

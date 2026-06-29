@@ -4,10 +4,10 @@
   "description": "Developer utilities desktop app for macOS",
   "main": "./out/main/index.js",
   "author": "zobite",
-  "homepage": "https://github.com/phamvanquyit/dev-life",
+  "homepage": "https://github.com/phuongluong1307/dev-life",
   "repository": {
     "type": "git",
-    "url": "https://github.com/phamvanquyit/dev-life.git"
+    "url": "https://github.com/phuongluong1307/dev-life.git"
   },
   "license": "MIT",
   "scripts": {

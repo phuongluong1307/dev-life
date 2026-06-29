@@ -131,7 +131,7 @@ docs: update README with build instructions
 
 ## Reporting Bugs
 
-Use [GitHub Issues](https://github.com/phamvanquyit/dev-life/issues/new?template=bug_report.md) with the bug report template. Include:
+Use [GitHub Issues](https://github.com/phuongluong1307/dev-life/issues/new?template=bug_report.md) with the bug report template. Include:
 
 - macOS version
 - App version
@@ -141,7 +141,7 @@ Use [GitHub Issues](https://github.com/phamvanquyit/dev-life/issues/new?template
 
 ## Suggesting Features
 
-Use [GitHub Issues](https://github.com/phamvanquyit/dev-life/issues/new?template=feature_request.md) with the feature request template. Include:
+Use [GitHub Issues](https://github.com/phuongluong1307/dev-life/issues/new?template=feature_request.md) with the feature request template. Include:
 
 - Problem you're trying to solve
 - Proposed solution

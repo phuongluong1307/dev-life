@@ -1,6 +1,6 @@
 #!/bin/bash
 # Dev Life — one-command installer for macOS
-# Usage: curl -fsSL https://raw.githubusercontent.com/phamvanquyit/dev-life/main/scripts/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/phuongluong1307/dev-life/main/scripts/install.sh | bash
 
 set -e
 
@@ -15,7 +15,7 @@ DIM='\033[2m'
 NC='\033[0m'
 
 APP_NAME="Dev Life"
-REPO="phamvanquyit/dev-life"
+REPO="phuongluong1307/dev-life"
 INSTALL_DIR="/Applications"
 
 echo -e "${BLUE}=======================================${NC}"

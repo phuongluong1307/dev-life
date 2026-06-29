@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/phamvanquyit/dev-life/releases"><img src="https://img.shields.io/github/v/release/phamvanquyit/dev-life?style=flat-square" alt="Release"></a>
-  <a href="https://github.com/phamvanquyit/dev-life/blob/main/LICENSE"><img src="https://img.shields.io/github/license/phamvanquyit/dev-life?style=flat-square" alt="License"></a>
+  <a href="https://github.com/phuongluong1307/dev-life/releases"><img src="https://img.shields.io/github/v/release/phuongluong1307/dev-life?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/phuongluong1307/dev-life/blob/main/LICENSE"><img src="https://img.shields.io/github/license/phuongluong1307/dev-life?style=flat-square" alt="License"></a>
 </p>
 
 ---
@@ -30,12 +30,12 @@
 ### One-liner (recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/phamvanquyit/dev-life/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/phuongluong1307/dev-life/main/scripts/install.sh | bash
 ```
 
 ### Manual download
 
-1. Download the latest `.dmg` from [Releases](https://github.com/phamvanquyit/dev-life/releases/latest)
+1. Download the latest `.dmg` from [Releases](https://github.com/phuongluong1307/dev-life/releases/latest)
 2. Open the `.dmg` and drag **Dev Life** to `/Applications`
 3. Remove the quarantine flag (app is unsigned):
    ```bash
@@ -56,7 +56,7 @@ curl -fsSL https://raw.githubusercontent.com/phamvanquyit/dev-life/main/scripts/
 
 ```bash
 # Clone the repository
-git clone https://github.com/phamvanquyit/dev-life.git
+git clone https://github.com/phuongluong1307/dev-life.git
 cd dev-life
 
 # Install dependencies
